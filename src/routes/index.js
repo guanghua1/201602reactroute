@@ -5,5 +5,5 @@ export default (
 <Route path="/" component={App}>
     <IndexRoute component={Home}/>
     <Route path="home" component={Home}/>
-    <Route path="profile" component={Profile}/>
+    <Route path="profile/:username" component={Profile}/>
 </Route>)
