@@ -15,7 +15,7 @@ module.exports = {
       stats: { colors: true }
     },
     entry: {
-      index: path.resolve(__dirname, 'app/index.js')
+      index: path.resolve(__dirname, 'src/index.js')
     },
     output: {
         path: path.resolve(__dirname, 'build'),
@@ -55,7 +55,7 @@ module.exports = {
       new webpack.HotModuleReplacementPlugin(),
       new HtmlWebpackPlugin({
         title: '珠峰培训',
-        template: './app/index.html',
+        template: './src/index.html',
       }),
       new OpenBrowserPlugin({ url: 'http://localhost:8080' })
     ]
