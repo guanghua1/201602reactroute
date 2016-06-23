@@ -1,11 +1,8 @@
-var obj = {
-    name:'zpfx',
-    age:8
-}
-/*
-let name = obj.name;
-let age = obj.age;
-*/
-
-let {name,age} = obj;
-console.log(name,age);
+var axios = require('axios');
+axios.get('https://api.github.com/users/zhufengnodejs')
+    .then(function (response) {
+        console.log(response.data);
+    })
+    .catch(function (error) {
+        console.log(error);
+    });

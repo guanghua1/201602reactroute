@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
 import { App,Home,User,Profile } from './containers';
-import {UserAdd,UserList} from './components';
+import {UserAdd,UserList,UserDetail} from './components';
 import {Router,Route,hashHistory} from 'react-router';
 import 'bootstrap/dist/css/bootstrap.css';
 
@@ -12,6 +12,7 @@ render( <Router history={hashHistory} >
         <Route path="user" component={User}>
             <Route path="list" component={UserList}/>
             <Route path="add" component={UserAdd}/>
+            <Route path="detail/:id" component={UserDetail}/>
         </Route>
         <Route path="profile" component={Profile}/>
     </Route>
