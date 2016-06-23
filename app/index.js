@@ -4,7 +4,12 @@ import { App,Home,User,Profile } from './containers';
 import {UserAdd,UserList,UserDetail} from './components';
 import {Router,Route,hashHistory,IndexRoute,Redirect} from 'react-router';
 import 'bootstrap/dist/css/bootstrap.css';
-
+function onEnter(route){
+    console.log('即将进入'+route.location.pathname+'路径');
+}
+function onLeave(){
+    console.log('我将轻轻的离开');
+}
 let root = document.getElementById('app');
 render( <Router history={hashHistory} >
     <Route path="/" component={App}>
@@ -17,7 +22,7 @@ render( <Router history={hashHistory} >
             <Route path="add" component={UserAdd}/>
             <Route path="detail/:id" component={UserDetail}/>
         </Route>
-        <Route path="profile" component={Profile}/>
+        <Route path="profile" component={Profile} onEnter={onEnter} onLeave={onLeave}/>
     </Route>
 </Router>, root );
 /**

@@ -11,9 +11,9 @@ class App extends React.Component {
             </div>
             <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul className="nav navbar-nav">
-                <li className="active"><Link to="/home">首页</Link></li>
-                <li><Link to="/user">用户管理</Link></li>
-                <li><Link to="/profile">个人设置</Link></li>
+                <li ><Link activeStyle={{backgroundColor:'red'}} to="/home">首页</Link></li>
+                <li ><Link activeStyle={{color:'red'}} to="/user">用户管理</Link></li>
+                <li ><Link activeStyle={{color:'red'}} to="/profile">个人设置</Link></li>
               </ul>
             </div>
           </div>
