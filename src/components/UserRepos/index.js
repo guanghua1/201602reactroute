@@ -8,7 +8,7 @@ export default class UserRepos extends React.Component{
                     <ul className="list-group">
                         {
                             this.props.repos.map((item,index)=>{
-                                return <li key={index} className="list-group-item">{item}</li>
+                                return <li key={index} className="list-group-item"><a href={item.html_url}>{item.name}</a><br/>{item.description}</li>
                             })
                         }
                     </ul>
