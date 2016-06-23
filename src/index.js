@@ -1,12 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Router,Route,hashHistory} from 'react-router';
-import {App} from './container';
-ReactDOM.render(
-    <Router history={hashHistory}>
-        <Route path="/" component={App}>
+import {Router,hashHistory} from 'react-router';
 
-        </Route>
-    </Router>,
+import routes from './routes';
+ReactDOM.render(
+    <Router routes={routes} history={hashHistory}/>,
     document.querySelector('#app')
 );
